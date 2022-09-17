@@ -1,0 +1,176 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(82, 163, 250);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.nav,
+.header,
+.section {
+    width: 100%;
+}
+
+.aside {
+    display: none;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section {
+    flex: 3;
+}
+
+.nav,
+.section,
+.header,
+.fotter {
+    padding: 1rem 0.75rem;
+}
+
+.nav .nav-container img {
+    width: 50px;
+    height: auto;
+    border-radius: .35rem;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: .625rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav ul .nav-item a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.main .header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.section .escudo img,
+.section .gobernador figure img,
+.section .departamento figure img {
+    display: block;
+    margin-top: 1.5rem;
+    width: min(100%, 360px);
+    height: auto;
+    border-radius: .25rem;
+}
+
+.section .gobernador figure figcaption,
+.section .departamento figure figcaption {
+    font-size: 1.125rem;
+}
+
+
+.section .provincias h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section .provincias .provincias-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.section .section-item .state-container {
+    padding: 1.5rem .865rem;
+    background-color: beige;
+    border-radius: .25rem;
+    width: min(100%, 350px);
+}
+
+.section .section-item .state-container h3 {
+    text-align: center;
+}
+
+.section .section-item .state-container .distritos {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.section .section-item .state-container .distritos ul {
+    margin-left: .75rem;
+    margin-top: .625rem;
+}
+
+.section .section-item ul li {
+    list-style: none;
+}
+
+.footer p {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+
+    .main {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .container {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .aside {
+        display: initial;
+        flex: 1;
+    }
+
+    .aside .mapa {
+        margin-bottom: 1.5rem;
+    }
+
+    .aside figure img {
+        display: block;
+        margin: 1rem auto;
+        width: min(100%, 200px);
+        height: auto;
+        border-radius: .25rem;
+    }
+
+    .aside figure figcaption {
+        text-align: center;
+    }
+}
