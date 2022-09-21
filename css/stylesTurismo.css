@@ -1,0 +1,73 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    border-left: 3px solid #d3d1d1;
+    border-right: 3px solid #d3d1d1;
+    padding: 2rem;
+}
+
+.main .nav {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.footer p{
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
