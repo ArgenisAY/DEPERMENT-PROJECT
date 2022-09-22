@@ -6,9 +6,6 @@
     padding: 0;
 }
 
-html {
-    font-size: 16px;
-}
 
 .material-icons {
     font-family: 'Material Icons';
@@ -36,19 +33,231 @@ html {
     font-feature-settings: 'liga';
 }
 
+html {
+    font-size: 16px;
+}
+
 .material-icons.md-36 {
     font-size: 36px;
+}
+
+.material-icons.white {
+    color: #64370f;
+}
+
+body {
+    background-color: #dbcfb2;
+    position: relative;
 }
 
 button {
     border: none;
     outline: none;
-    background-color: white;
+    display: block;
+    width: 100%;
+    background-color: #dbcfb2;
     cursor: pointer;
 }
 
-.main .nav {
+.main {
+    display: flex;
+    flex-direction: column
+}
+
+
+.main .home {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    z-index: 999;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.main .home button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav,
+.header,
+.section {
+    width: 100%;
+}
+
+.aside {
+    display: none;
+}
+
+.nav {
+    margin: 0 auto;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e7be7c;
+    padding: .625rem;
+}
+
+.nav .nav-container img {
+    display: block;
+    width: 50px;
+    height: auto;
+    border-radius: .35rem;
+}
+
+.nav ul {
+    /* margin-right: 1rem; */
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.25rem;
+    list-style-type: none;
+    align-items: center;
+}
+
+.nav ul .nav-item a {
+    text-decoration: none;
+    color: #64370f;
+    cursor: pointer;
+    font-size: clamp(1.125rem, 2vw, 1.625rem);
+    font-weight: 500;
+}
+
+.main .header {
+    margin-top: 5rem;
+    padding: 1rem .75rem;
+}
+
+.main .header h1 {
+    font-size: clamp(3rem, 3.5vw, 5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.main .container {
+    padding: 0 1.125rem;
+}
+
+.responsive-media {
+    position: relative;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.responsive-media>* {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main .section {
+    padding: 1rem .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.75rem;
+}
+
+.main .section .section-item h2 {
+    font-size: clamp(1.75rem, 2.5vw, 3rem);
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.main .section .section-item p {
+    margin-top: 1.125rem;
+    color: #64370f;
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.main .section .section-item img {
+    display: block;
+    margin: 1.5rem auto 0;
+    width: min(100%, 360px);
+    height: auto;
+    border-radius: .25rem;
+}
+
+.footer {
+    padding: 1rem .75rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer p {
+    text-align: center;
+    color: #64370f;
+}
+
+@media screen and (min-width: 768px) {
+
+    .main {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .main .nav {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .container {
+        display: flex;
+        gap: 2.5rem;
+        justify-content: center;
+    }
+
+    .main .container .section {
+        flex: 70%;
+    }
+
+    .main .section .section-item p {
+        line-height: 2rem;
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        padding: 1.5rem 0;
+        flex: 30%;
+    }
+
+    .aside div h3 {
+        font-size: clamp(1.125rem, 2vw, 2rem);
+        color: #fff;
+        text-transform: uppercase;
+
+    }
+
+    .aside .mapa {
+        margin-bottom: 1.5rem;
+    }
+
+
+
+    .aside figure img {
+        display: block;
+        margin: 1rem auto;
+        width: 100%;
+        height: auto;
+        border-radius: .25rem;
+    }
+
+    .aside figure figcaption {
+        text-align: center;
+        font-size: 1.125rem;
+        color: #64370f;
+    }
 }
